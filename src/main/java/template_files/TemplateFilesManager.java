@@ -1,10 +1,11 @@
-public class BaseClass {
+package template_files;
 
-    private static BaseClass manager;
+public class TemplateFilesManager {
+    private static TemplateFilesManager manager;
 
-    public static BaseClass getInstance() {
+    public static TemplateFilesManager getInstance() {
         if (manager == null) {
-            manager = new BaseClass();
+            manager = new TemplateFilesManager();
         }
         return manager;
     }
@@ -13,11 +14,10 @@ public class BaseClass {
     private String loginAccount;
     private int countNumberPasswordAccount;
 
-    public BaseClass() {
-
+    public TemplateFilesManager() {
     }
 
-    public BaseClass(String nameAccount, String loginAccount, int countNumberPasswordAccount) {
+    public TemplateFilesManager(String nameAccount, String loginAccount, int countNumberPasswordAccount) {
         this.nameAccount = nameAccount;
         this.loginAccount = loginAccount;
         this.countNumberPasswordAccount = countNumberPasswordAccount;
@@ -47,4 +47,18 @@ public class BaseClass {
         this.countNumberPasswordAccount = countNumberPasswordAccount;
     }
 
+    public void printAccountFile(String fileName) {
+        System.out.println("File name: " + fileName);
+    }
+
+    public TemplateFilesManager getFile(GenerateFiles generateFiles) {
+        if (generateFiles == null) {
+            throw new IllegalArgumentException("File can't open in your browser!");
+        }
+        return switch (generateFiles) {
+            case XML -> new TemplateFileXML("a", "b", 24);
+            case JSON -> new TemplateFileXML("c", "d", 24);
+        };
+    }
 }
+
