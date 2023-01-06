@@ -4,32 +4,27 @@ import generator.FileGenerationType;
 import template_files.*;
 import writers.FileWriter;
 
+import java.io.File;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+
 public class Main {
     public static void main(String[] args) {
         TemplateFilesManager templateFilesManager = new TemplateFilesManager();
         FileType xml = templateFilesManager.generateFile(FileGenerationType.XML);
         FileType json = templateFilesManager.generateFile(FileGenerationType.JSON);
 
-        TemplateFileXML templateFileXML = new TemplateFileXML();
-        templateFileXML.setNameAccount("Xml");
-        templateFileXML.setLoginAccount("superFilE");
-        templateFileXML.setCountNumberPasswordAccount(8);
         xml.getNameFile();
         xml.getUsersListSize(5);
-        System.out.println(templateFileXML.toStringXML());
+        xml.getCountNumberPassword(16);
         System.out.println();
 
-        TemplateFileJSON templateFileJSON = new TemplateFileJSON();
-        templateFileJSON.setNameAccount("jSoN");
-        templateFileJSON.setLoginAccount("1234Login");
-        templateFileJSON.setCountNumberPasswordAccount(16);
-        System.out.println(templateFileJSON.toStringJSON());
         json.getNameFile();
         json.getUsersListSize(14);
+        json.getCountNumberPassword(8);
         /* If I need to add more info to generate file, I should create new interface and do implement him */
-
-
         FileWriter writer = new FileWriter();
-        //  writer.writeObjectToFile(fileJSON, new File("FFF.txt"));
+        writer.writeObjectToFile(xml, new File("FileXML.txt"));
+        writer.writeObjectToFile(json, new File("FileJSON.txt"));
     }
 }
