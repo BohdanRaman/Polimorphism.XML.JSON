@@ -1,6 +1,7 @@
 package generator;
 
-public enum FileGenerationType {
+
+public enum FileGenerationType{
     JSON,
     XML;
 }

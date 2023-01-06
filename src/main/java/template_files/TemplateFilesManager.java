@@ -2,20 +2,12 @@ package template_files;
 
 import generator.FileGenerationType;
 
-public class TemplateFilesManager {
-    private static TemplateFilesManager manager;
-
-    public static TemplateFilesManager getInstance() {
-        if (manager == null) {
-            manager = new TemplateFilesManager();
-        }
-        return manager;
-    }
+public class TemplateFilesManager{
 
     public TemplateFilesManager() {
     }
 
-    public FileType generateFile(FileGenerationType generateFile) {
+    public InformationAboutFile generateFile(FileGenerationType generateFile) {
         if (generateFile == null) {
             throw new IllegalArgumentException("File can't open in your browser!");
         }
