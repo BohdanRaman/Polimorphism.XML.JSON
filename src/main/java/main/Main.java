@@ -23,7 +23,6 @@ public class Main {
         json.getUsersListSize(14);
         json.getCountNumberPassword(8);
         /* If I need to add more info to generate file, I should create new interface and do implement him */
-
         FileWriter writer = new FileWriter();
         writer.writeObjectToFile(xml, new File("FileXML.txt"));
         writer.writeObjectToFile(json, new File("FileJSON.txt"));
