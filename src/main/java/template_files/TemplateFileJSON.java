@@ -11,14 +11,14 @@ public class TemplateFileJSON implements FileType, Serializable {
     }
 
     @Override
-    public void getUsersListSize(int users) {
-        if (users > 0 && users < 3) {
+    public void getUsersListSize(int sizeList) {
+        if (sizeList > 0 && sizeList < 3) {
             System.out.println("Small users list");
         }
-        if (users >= 3 && users < 10) {
+        if (sizeList >= 3 && sizeList < 10) {
             System.out.println("Medium users list");
         }
-        if (users >= 10) {
+        if (sizeList >= 10) {
             System.out.println("Big users list");
         }
     }

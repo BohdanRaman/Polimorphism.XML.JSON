@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.nio.charset.Charset;
 
 public class FileWriter {
 
@@ -14,8 +13,11 @@ public class FileWriter {
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
             oos.writeObject(obj);
             oos.flush();
-        } catch (IOException e) {
-            throw new RuntimeException("Error");
+            fos.flush();
+            fos.close();
+            oos.close();
+        } catch (IOException exception) {
+            throw new RuntimeException("Attention, object wasn't write in file.");
         }
     }
 }

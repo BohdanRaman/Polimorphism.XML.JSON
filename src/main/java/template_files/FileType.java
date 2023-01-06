@@ -4,7 +4,7 @@ public interface FileType extends CountNumberPassword {
 
     void getNameFile();
 
-    void getUsersListSize(int users);
+    void getUsersListSize(int sizeList);
 
     @Override
     void getCountNumberPassword(int count);
