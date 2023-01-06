@@ -1,33 +1,9 @@
 package template_files;
 
-public class TemplateFileXML implements FileType {
-    private String nameAccount;
-    private String loginAccount;
-    private int countNumberPasswordAccount;
+import java.io.Serializable;
 
-    public String getNameAccount() {
-        return nameAccount;
-    }
-
-    public void setNameAccount(String nameAccount) {
-        this.nameAccount = nameAccount;
-    }
-
-    public String getLoginAccount() {
-        return loginAccount;
-    }
-
-    public void setLoginAccount(String loginAccount) {
-        this.loginAccount = loginAccount;
-    }
-
-    public int getCountNumberPasswordAccount() {
-        return countNumberPasswordAccount;
-    }
-
-    public void setCountNumberPasswordAccount(int countNumberPasswordAccount) {
-        this.countNumberPasswordAccount = countNumberPasswordAccount;
-    }
+public class TemplateFileXML implements FileType, CountNumberPassword, Serializable {
+    public static final long serialVersionUID = 1L;
 
     @Override
     public void getNameFile() {
@@ -47,11 +23,11 @@ public class TemplateFileXML implements FileType {
         }
     }
 
-    public String toStringXML() {
-        return "TemplateFileXML: " +
-                "nameAccount= " + getNameAccount().toUpperCase() +
-                ", loginAccount= " + getLoginAccount() +
-                ", countNumberPasswordAccount= " + getCountNumberPasswordAccount();
+    @Override
+    public void getCountNumberPassword(int count) {
+        String countNumber = "";
+        countNumber = (count > 8) ? "Good password" : "Bad password";
+        System.out.println(countNumber);
     }
 }
 
