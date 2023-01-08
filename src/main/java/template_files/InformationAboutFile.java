@@ -1,11 +1,8 @@
 package template_files;
 
-public interface InformationAboutFile extends CountNumberPassword {
+public interface InformationAboutFile extends TemplateName {
 
-    void getNameFile();
+    void templateFile();
 
-    void getUsersListSize(int listSize);
 
-    @Override
-    void getCountNumberPassword(int count);
 }

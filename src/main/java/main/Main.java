@@ -23,17 +23,17 @@ public class Main {
         System.out.println();
 
         xml.getNameFile();
-        xml.getUsersListSize(5);
-        xml.getCountNumberPassword(16);
+        xml.templateFile();
         System.out.println();
 
         json.getNameFile();
-        json.getUsersListSize(14);
-        json.getCountNumberPassword(8);
+        json.templateFile();
+        System.out.println();
+
         /* If I need to add more info to generate file, I should create new interface and do implement him */
 
         FileWriter writer = new FileWriter();
-        writer.writeObjectToFile(xml, new File("FileXML.txt"));
-        writer.writeObjectToFile(json, new File("FileJSON.txt"));
+        writer.writeObjectToFile(fileXML, new File("FileXML.txt"));
+        writer.writeObjectToFile(fileJSON, new File("FileJSON.txt"));
     }
 }
