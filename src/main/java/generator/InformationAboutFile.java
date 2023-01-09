@@ -1,4 +1,4 @@
-package template_files;
+package generator;
 
 public interface InformationAboutFile extends TemplateName {
 

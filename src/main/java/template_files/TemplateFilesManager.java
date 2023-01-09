@@ -1,6 +1,7 @@
 package template_files;
 
 import generator.FileGenerationType;
+import generator.InformationAboutFile;
 import generator.JSONGeneration;
 import generator.XMLGeneration;
 

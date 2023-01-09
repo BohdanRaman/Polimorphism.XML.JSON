@@ -1,6 +1,7 @@
 package main;
 
 import generator.FileGenerationType;
+import generator.InformationAboutFile;
 import template_files.*;
 import writers.FileWriter;
 
