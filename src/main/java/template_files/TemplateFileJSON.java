@@ -23,12 +23,5 @@ public class TemplateFileJSON implements Serializable {
     public void setLoginAccount(String loginAccount) {
         this.loginAccount = loginAccount;
     }
-
-    @Override
-    public String toString() {
-        return "TemplateFileJSON: " +
-                "nameAccount = " + getNameAccount() +
-                ", loginAccount = " + getLoginAccount();
-    }
 }
 
