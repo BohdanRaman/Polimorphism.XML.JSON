@@ -1,23 +1,16 @@
 package generator;
 
-public class JSONGeneration implements InformationAboutFile{
+import template_files.TemplateFile;
+
+public class JSONGeneration extends TemplateFile implements InformationAboutFile {
+
     @Override
     public void templateFile() {
-        System.out.println("""
-                [
-                        {
-                            "value": "Raman Bohdan",
-                            "unrestricted_value": "Raman Bohdan",
-                            "data": {
-                                "surname": "Bohdan",
-                                "name": "Raman",
-                                "status": JavaTrainee,
-                                "company": Asist-lab.com,
-                                "gender": "MALE"
-                            }
-                        }
-                ]""");
-
+        System.out.println("[  " + "\n"
+                           + "   {   \"name account: \"" + getNameAccount() + "\"," + "\n"
+                           + "       \"login account: \"" + getLoginAccount() + "\""+ "\n"
+                           + "    }" + "\n" +
+                           "]");
     }
 
     @Override

@@ -1,5 +1,5 @@
 package generator;
 
-public interface TemplateName {
+public interface Name {
     void getNameFile();
 }

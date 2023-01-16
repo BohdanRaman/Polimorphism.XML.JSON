@@ -2,7 +2,7 @@ package template_files;
 
 import java.io.Serializable;
 
-public class TemplateFileJSON implements Serializable {
+public class TemplateFile implements Serializable {
     public static final long serialVersionUID = 1L;
 
     private String nameAccount;
@@ -13,7 +13,7 @@ public class TemplateFileJSON implements Serializable {
     }
 
     public void setNameAccount(String nameAccount) {
-       this.nameAccount = nameAccount;
+        this.nameAccount = nameAccount;
     }
 
     public String getLoginAccount() {
@@ -22,13 +22,6 @@ public class TemplateFileJSON implements Serializable {
 
     public void setLoginAccount(String loginAccount) {
         this.loginAccount = loginAccount;
-    }
-
-    @Override
-    public String toString() {
-        return "TemplateFileJSON: " +
-                "nameAccount = " + getNameAccount() +
-                ", loginAccount = " + getLoginAccount();
     }
 }
 

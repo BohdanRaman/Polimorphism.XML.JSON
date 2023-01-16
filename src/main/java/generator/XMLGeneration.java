@@ -1,16 +1,16 @@
 package generator;
 
-public class XMLGeneration implements InformationAboutFile {
+import template_files.TemplateFile;
+
+public class XMLGeneration extends TemplateFile implements InformationAboutFile {
+
     @Override
     public void templateFile() {
-        System.out.println("""
-                <?xml version="1.0"?>
-                <list_of_refactoring_code>
-                <refactoring_code id="1"><first</refactoring_code>
-                <refactoring_code id="2">second</refactoring_code>
-                <refactoring_code id="3">third</refactoring_code>
-                <refactoring_code id="4"><last</refactoring_code>
-                </refactoring_code>""");
+        System.out.println("<?xml version=\"1.0\"?>\n" +
+                           "<body>\n" +
+                           "<name_account id=\"1\"><" + getNameAccount() + "</name_account>\n" +
+                           "<login_account id=\"2\">" + getLoginAccount() + "</login_account>\n" +
+                           "<body>");
     }
 
     @Override
