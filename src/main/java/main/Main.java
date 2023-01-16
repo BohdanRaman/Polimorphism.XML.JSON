@@ -18,9 +18,9 @@ public class Main {
         InformationAboutFile json = templateFilesManager.generateFile(FileGenerationType.JSON);
 
         fileXML.setLoginAccount("XMLlogin");
-        fileXML.setNameAccount("Example name account XML");
+        fileXML.setNameAccount("name account 'XML'");
         fileJSON.setLoginAccount("JSONlogin");
-        fileJSON.setNameAccount("Example name account JSON");
+        fileJSON.setNameAccount("name account 'JSON'");
 
         xml.getNameFile();
         fileXML.templateFile();

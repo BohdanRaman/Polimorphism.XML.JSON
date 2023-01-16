@@ -1,14 +1,14 @@
 package generator;
 
-import template_files.TemplateFileJSON;
+import template_files.TemplateFile;
 
-public class JSONGeneration extends TemplateFileJSON implements InformationAboutFile {
+public class JSONGeneration extends TemplateFile implements InformationAboutFile {
 
     @Override
     public void templateFile() {
         System.out.println("[  " + "\n"
-                           + "   {   \"name account: \"" + getNameAccount() + "," + "\n"
-                           + "       \"login account: \"" + getLoginAccount() + "\n"
+                           + "   {   \"name account: \"" + getNameAccount() + "\"," + "\n"
+                           + "       \"login account: \"" + getLoginAccount() + "\""+ "\n"
                            + "    }" + "\n" +
                            "]");
     }

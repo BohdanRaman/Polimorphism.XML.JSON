@@ -1,8 +1,8 @@
 package generator;
 
-import template_files.TemplateFileXML;
+import template_files.TemplateFile;
 
-public class XMLGeneration extends TemplateFileXML implements InformationAboutFile {
+public class XMLGeneration extends TemplateFile implements InformationAboutFile {
 
     @Override
     public void templateFile() {

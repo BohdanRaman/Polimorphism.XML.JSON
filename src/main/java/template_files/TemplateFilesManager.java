@@ -15,8 +15,8 @@ public class TemplateFilesManager{
             throw new IllegalArgumentException("File can't open in your browser!");
         }
         return switch (generateFile) {
-            case XML -> new JSONGeneration();
-            case JSON -> new XMLGeneration();
+            case XML -> new XMLGeneration();
+            case JSON -> new JSONGeneration();
         };
     }
 }
